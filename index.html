@@ -16,8 +16,8 @@
         <!-- font awesome -->
         <script src="js/all.js"></script>
         <title>Counter Project</title>
-        <style>
-        </style>
+        <script src="https://unpkg.com/vue@next" defer></script>
+        <script src="js/app-vue.js" defer></script>
     </head>
 
     <body>
@@ -28,17 +28,17 @@
                 <div
                     class="col-10 mx-auto col-md-6 text-center main-container p-5">
                     <h1 class="text-uppercase">counter</h1>
-                    <h1 id="counter">0</h1>
+                    <h1 id="counter">{{ counter }}</h1>
                     <div
                         class="btn-container d-flex justify-content-around flex-wrap">
                         <button
-                            class="btn counterBtn prevBtn text-uppercase m-2">lower
+                            class="btn counterBtn prevBtn text-uppercase m-2" @click="updateCounter(-1)">lower
                             count</button>
                         <button
-                            class="btn counterBtn nextBtn text-uppercase m-2">add
+                            class="btn counterBtn nextBtn text-uppercase m-2" @click="updateCounter(1)">add
                             count</button>
                         <button
-                            class="btn counterBtn resBtn text-uppercase m-2">Reset
+                            class="btn counterBtn resBtn text-uppercase m-2" @click="counter = 0">Reset
                             count</button>
                     </div>
                 </div>
@@ -51,8 +51,6 @@
         <script src="js/jquery-3.3.1.min.js"></script>
         <!-- bootstrap js -->
         <script src="js/bootstrap.bundle.min.js"></script>
-        <!-- script js -->
-        <script src="js/app.js"></script>
     </body>
 
 </html>
