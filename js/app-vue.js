@@ -3,7 +3,7 @@ const app = Vue.createApp({
         return {
             counter: 0,
             styleObject: {
-                color: ' '
+                color: ''
               }
         }
     },
@@ -17,6 +17,10 @@ const app = Vue.createApp({
             } else {
                 this.styleObject.color = 'green'
             }
+        },
+        resetCounter(){
+            this.counter = 0
+            this.styleObject.color = '#333333'
         }
     }
 })
